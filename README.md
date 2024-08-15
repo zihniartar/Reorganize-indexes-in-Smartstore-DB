@@ -65,6 +65,17 @@ ALTER INDEX [IX_GenericAttribute_Key] ON [GenericAttribute] REBUILD;
 ALTER INDEX [IX_GenericAttribute_EntityId_and_KeyGroup] ON [GenericAttribute] REBUILD;
 ```
 
+## Reorganize all indexes of a table
+```bash
+ALTER INDEX ALL ON [TableName] REORGANIZE;
+```b
+
+## Rebuild all indexes of a table
+```bash
+ALTER INDEX ALL ON [TableName] REBUILD;
+```b
+
+
 
 # Check degree of fragmentation
 
