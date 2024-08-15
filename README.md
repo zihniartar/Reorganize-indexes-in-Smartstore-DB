@@ -24,7 +24,7 @@ ALTER INDEX [IX_Customer_Deleted_IsSystemAccount] ON [Customer] REORGANIZE;
 ALTER INDEX [IX_IsSystemAccount] ON [Customer] REORGANIZE;
 ```
 
-### Rebuild Indexes in GenericAttribute table
+### Reorganize Indexes in GenericAttribute table
 ```bash
 ALTER INDEX [IX_GenericAttribute_Key] ON [GenericAttribute] REORGANIZE;
 ALTER INDEX [IX_GenericAttribute_EntityId_and_KeyGroup] ON [GenericAttribute] REORGANIZE;
@@ -33,7 +33,7 @@ ALTER INDEX [IX_GenericAttribute_EntityId_and_KeyGroup] ON [GenericAttribute] RE
 ## Rebuild
 Use REBUILD for heavily fragmented indexes.
 
-### Reorganize Indexes in Customer table
+### Rebuild Indexes in Customer table
 ```bash
 ALTER INDEX [IX_Deleted] ON [Customer] REBUILD;
 ALTER INDEX [IX_SystemName] ON [Customer] REBUILD;
@@ -53,7 +53,7 @@ ALTER INDEX [IX_Customer_Deleted_IsSystemAccount] ON [Customer] REBUILD;
 ALTER INDEX [IX_IsSystemAccount] ON [Customer] REBUILD;
 ```
 
-### Reorganize Indexes in GenericAttribute table
+### Rebuild Indexes in GenericAttribute table
 ```bash
 ALTER INDEX [IX_GenericAttribute_Key] ON [GenericAttribute] REBUILD;
 ALTER INDEX [IX_GenericAttribute_EntityId_and_KeyGroup] ON [GenericAttribute] REBUILD;
