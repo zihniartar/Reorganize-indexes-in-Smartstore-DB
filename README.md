@@ -68,12 +68,12 @@ ALTER INDEX [IX_GenericAttribute_EntityId_and_KeyGroup] ON [GenericAttribute] RE
 ## Reorganize all indexes of a table
 ```bash
 ALTER INDEX ALL ON [TableName] REORGANIZE;
-```b
+```
 
 ## Rebuild all indexes of a table
 ```bash
 ALTER INDEX ALL ON [TableName] REBUILD;
-```b
+```
 
 
 
