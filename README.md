@@ -103,3 +103,18 @@ WHERE TABLE_TYPE = 'BASE TABLE'
 ORDER BY TABLE_NAME;
 
 ```
+
+# Reindex all indexes in a database
+```bash
+DECLARE @sql NVARCHAR(MAX) = N'';
+
+SELECT @sql = @sql + N'
+ALTER INDEX ' + QUOTENAME(i.name) + ' ON ' + QUOTENAME(SCHEMA_NAME(t.schema_id)) + '.' + QUOTENAME(t.name) + ' REBUILD;'
+FROM sys.indexes AS i
+INNER JOIN sys.tables AS t ON i.object_id = t.object_id
+WHERE i.type > 0 AND i.is_disabled = 0;
+
+EXEC sp_executesql @sql;
+
+
+```
