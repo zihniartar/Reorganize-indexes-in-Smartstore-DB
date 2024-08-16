@@ -93,3 +93,13 @@ WHERE
     avg_fragmentation_in_percent > 10;
 
 ```
+
+
+# List all table names in a database
+```bash
+SELECT TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE'
+ORDER BY TABLE_NAME;
+
+```
